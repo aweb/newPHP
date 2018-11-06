@@ -1,5 +1,86 @@
 # PHP5.3 ~ PHP7新特性
 
+## PHP7.0 新特性
+- 标量类型声明
+- 返回值类型声明
+- null合并运算符
+- 太空船操作符（组合比较符）
+- 通过 define() 定义常量数组
+- 匿名类
+- Closure::call()
+- 为unserialize()提供过滤
+- Group use declarations
+- 生成器可以返回表达式
+- 整数除法函数 intdiv()
+- 会话选项
+- preg_replace_callback_array()
+- CSPRNG Functions
+- random_bytes|random_int函数
+- 允许在克隆表达式上访问对象成员，例如： (clone $foo)->bar()
+
+## PHP7.0 弃用的功能
+- PHP4 风格的构造函数
+- 静态调用非静态的方法
+- password_hash() 盐值选项
+- capture_session_meta SSL 上下文选项
+- ldap_sort() LDAP 中的废弃
+
+## PHP5.6 新特性
+
+- 使用表达式定义常量
+- 使用 ... 运算符定义变长参数函数
+- 使用 ... 运算符进行参数展开
+- 使用 ** 进行幂运算
+- use function 以及 use const
+- phpdbg
+- 默认字符编码
+- php://input 是可重用的了
+- 大文件上传(现在可以支持大于 2GB 的文件上传)
+- 使用 hash_equals() 比较字符串避免时序攻击
+- SSL/TLS改进
+
+## PHP5.6 中废弃的特性
+- 从不兼容的上下文调用方法
+- iconv 和 mbstring 编码设置
+
+
+## PHP5.5 新特性
+- 新增 Generators(yield)
+- 新增 finally 关键字
+- foreach 现在支持 list()
+- list()现在支持键名
+- empty() 支持任意表达式
+- array and string literal dereferencing
+- 新的密码哈希 API
+- 改进 GD
+
+## PHP 5.5.x 中废弃的特性
+- 废弃 ext/mysql
+- preg_replace() 中的 /e 修饰符
+- intl 中的废弃
+- mcrypt 中的废弃
+
+
+## PHP5.4 新特性
+```shell
+新增支持 traits 。
+新增短数组语法，比如 $a = [1, 2, 3, 4]; 或 $a = ['one' => 1, 'two' => 2, 'three' => 3, 'four' => 4]; 。
+新增支持对函数返回数组的成员访问解析，例如 foo()[0] 。
+现在 闭包 支持 $this 。
+现在不管是否设置 short_open_tag php.ini 选项，<?= 将总是可用。
+新增在实例化时访问类成员，例如： (new Foo)->bar() 。
+现在支持 Class::{expr}() 语法。
+新增二进制直接量，例如：0b001001101 。
+改进解析错误信息和不兼容参数的警告。
+SESSION 扩展现在能追踪文件的 上传进度 。
+内置用于开发的 CLI 模式的 web server 。
+```
+## PHP5.4过时的特性
+```
+mcrypt_generic_end()
+mysql_list_dbs()
+```
+
 ## PHP 5.3.0 提供了广泛的新特性:
 
 - 添加了命名空间的支持.
@@ -59,27 +140,6 @@ mktime() 的 is_dst 参数. 使用新的时区处理函数替代.
 弃用通过引用分配 new 的返回值.
 调用时传递引用被弃用.
 
-```
-
-## PHP5.4 新特性
-
-```shell
-新增支持 traits 。
-新增短数组语法，比如 $a = [1, 2, 3, 4]; 或 $a = ['one' => 1, 'two' => 2, 'three' => 3, 'four' => 4]; 。
-新增支持对函数返回数组的成员访问解析，例如 foo()[0] 。
-现在 闭包 支持 $this 。
-现在不管是否设置 short_open_tag php.ini 选项，<?= 将总是可用。
-新增在实例化时访问类成员，例如： (new Foo)->bar() 。
-现在支持 Class::{expr}() 语法。
-新增二进制直接量，例如：0b001001101 。
-改进解析错误信息和不兼容参数的警告。
-SESSION 扩展现在能追踪文件的 上传进度 。
-内置用于开发的 CLI 模式的 web server 。
-```
-## PHP5.4过时的特性
-```
-mcrypt_generic_end()
-mysql_list_dbs()
 ```
 
 
