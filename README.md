@@ -1,5 +1,44 @@
 # PHP5.3 ~ PHP7新特性
 
+## PHP7.2 新特性
+- 新的对象类型
+- 通过名称加载扩展
+- 允许重写抽象方法(Abstract method)
+- 使用Argon2算法生成密码散列
+- 新增 ext/PDO（PDO扩展） 字符串扩展类型
+- 为 ext/PDO新增额外的模拟调试信息
+- ext/LDAP（LDAP扩展） 支持新的操作方式
+- ext/sockets（sockets扩展）添加了地址信息
+- 允许分组命名空间的尾部逗号
+
+## PHP7.2 废弃的功能
+- 不带引号的字符串
+- GD 扩展内的 png2wbmp() 和 jpeg2wbmp() 现已被废弃，将在下一个 PHP 主版本中移除。
+- __autoload() 方法已被废弃， 因为和 spl_autoload_register() 相比功能较差 (因为无法链式处理多个 autoloader)
+- track_errors ini 设置和 $php_errormsg 变量
+- 考虑到此函数的安全隐患问题（它是 eval() 的瘦包装器），该过时的函数现在已被废弃。 更好的选择是匿名函数。
+- mbstring.func_overload ini 设置
+- (unset) 类型强制转化
+- parse_str() 不加第二个参数
+- gmp_random() 函数
+- each() 函数
+
+## PHP7.1 新特性
+- 可为空（Nullable）类型
+- Void 函数
+- Symmetric array destructuring
+- 类常量可见性
+- iterable 伪类
+- 多异常捕获处理
+- list()现在支持键名
+- 支持为负的字符串偏移量
+- ext/openssl 支持 AEAD
+- 异步信号处理
+
+## PHP7.1 中废弃的特性
+- ext/mcrypt
+- mb_ereg_replace()和mb_eregi_replace()的Eval选项
+
 ## PHP7.0 新特性
 - 标量类型声明
 - 返回值类型声明
