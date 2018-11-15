@@ -31,7 +31,7 @@ try {
 echo "*********************** foreach 现在支持 list() START***********************\n";
 $array = [
     [1, 2],
-    [3, 4],
+    [3, 4,4,4],
 ];
 
 foreach ($array as list($a, $b)) {

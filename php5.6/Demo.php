@@ -17,6 +17,11 @@ const TWO = ONE * 2;
 const ARR = ['a', 'b'];
 
 class C {
+    function __construct()
+    {
+
+    }
+
     const THREE = TWO + 1;
     const ONE_THIRD = ONE / self::THREE;
     const SENTENCE = 'The value of THREE is '.self::THREE;
@@ -37,6 +42,7 @@ var_dump(ARR);
 echo "*********************** 使用 ... 运算符定义变长参数函数 START***********************\n";
 function f($req, $opt = null, ...$params) {
     // $params 是一个包含了剩余参数的数组
+    var_dump($params);
     printf('$req: %d; $opt: %d; number of params: %d; data is %s'."\n", $req, $opt, count($params), json_encode($params));
 }
 

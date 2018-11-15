@@ -59,14 +59,22 @@ echo "*********************** __invoke START***********************\n";
 
 class CallableClass
 {
-    function __invoke($x)
+    function __invoke($className, $method, ...$args)
     {
-        var_dump($x);
+        $obj = new $className;
+        $obj->$method($args);
     }
 }
 
+class testInvoke{
+  public function test($name) {
+      var_dump($name);
+      echo "hi, invoke : $name[0] \n";
+  }
+}
+
 $obj = new CallableClass;
-$obj(5);
+$obj('testInvoke', 'test',  '参数测试1', '参数测试2');
 var_dump(is_callable($obj));
 
 /**
